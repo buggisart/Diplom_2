@@ -3,6 +3,8 @@ public class UserCredentials {
     private String email;
     private String password;
 
+    private String name;
+
     public String getEmail() {
         return email;
     }
@@ -23,9 +25,14 @@ public class UserCredentials {
         this.email = email;
         this.password = password;
     }
-
-    public static UserCredentials from(User user) {
-        return new UserCredentials(user.getEmail(), user.getPassword());
+    public UserCredentials(String email, String password, String name) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
     }
+    public static UserCredentials from(User user) {
+        return new UserCredentials(user.getEmail(), user.getPassword(), user.getName());
+    }
+
 }
 
