@@ -10,7 +10,6 @@ private static final String LOGIN_USER = "auth/login";
 private static final String DELETE_USER = "auth/user";
 
 private static final String CHANGE_USERS_DATA = "auth/user";
-private static final String LOGOUT_USER = "auth/logout";
 
 public ValidatableResponse create(User user) {
     return given()
@@ -58,12 +57,4 @@ public ValidatableResponse changeUsersData(String authToken, UserCredentials new
                 .then()
                ;}
 
-public ValidatableResponse logoutUser(String refreshToken) {
-    return given()
-            .spec(getBaseSpec())
-            .body("{"+'"'+"token" + '"'+ ":" +'"'+refreshToken +'"' +'}')
-            .when()
-            .post(LOGOUT_USER)
-            .then();
-}
 }
