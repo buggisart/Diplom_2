@@ -1,4 +1,10 @@
-target/
+.gitignore
+target/allure-results
+target/classes
+target/generated-sources
+target/generated-test-sources
+target/maven-status
+target/test-classes
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -8,6 +14,7 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/workspace.xml
 *.iws
 *.iml
 *.ipr
